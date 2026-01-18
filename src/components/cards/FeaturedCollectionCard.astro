@@ -1,0 +1,26 @@
+---
+const {category, name, price, image_url, url} = Astro.props;
+---
+
+<div class="collection-container">
+    <div class="collection-image">
+        <img
+            class="rounded-2xl" 
+            src={image_url} 
+            alt="" 
+            draggable="false"
+        >
+    </div>
+    <div class="collection-text font-bold">
+        <p class="text-gold-1">{category}</p>
+        <h3 class="text-xl font-bold">{name}</h3>
+        <div class="collection-details flex justify-between">
+            <p class="price">S/ {price}</p>
+            {url && <div class="view-project">
+            <a href={url} target="_blank" class="bg-gold-1 px-4 py-2 rounded-lg text-[#f8f8f8]">
+                Ver
+            </a>
+            </div>}
+        </div>
+    </div>
+</div>

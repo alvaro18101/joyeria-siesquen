@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+
+@font-face {
+    font-family: 'Playfair-Display';
+    src: url('/fonts/Playfair-Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@theme {
+  /* FONTS */
+  --font-heading: 'Playfair-Display', 'serif';
+
+  /* COLORS */
+  --color-gold-1: #c17e35;
+  --color-gold-2: #c3894d;
+  --color-pearl-1: #fdf7f1;
+  --color-pearl-2: #f6ebdd;
+  --color-light-gray: #555;
+  --color-dark-gray: #111;
+}

@@ -1,0 +1,33 @@
+---
+import OurCategoriesCard from "../cards/OurCategoriesCard.astro"
+---
+
+<section id="our-categories">
+    <div class="our-categories-container p-20">
+        <h2 class="text-4xl font-bold mb-4 text-center">Nuestras Categorías</h2>
+        <p class="text-center mb-8 text-light-gray">Descubre nuestra selección de joyería en diferentes categorías</p>
+        <div class="our-categories-card-container flex gap-4">
+            <div class="our-categories-card w-1/3">
+                <OurCategoriesCard 
+                    category = "Anillos"
+                    description = "Diseños clásicos y contemporáneos"
+                    detail = "24 piezas"
+                />
+            </div>
+            <div class="our-categories-card w-1/3">
+                <OurCategoriesCard 
+                    category = "Collares"
+                    description = "Elegancia alrededor de tu cuello"
+                    detail = "24 piezas"
+                />
+            </div>
+            <div class="our-categories-card w-1/3">
+                <OurCategoriesCard 
+                    category = "Pendientes"
+                    description = "Luminosos y sofisticados"
+                    detail = "24 piezas"
+                />
+            </div>
+        </div>
+    </div>
+</section>
