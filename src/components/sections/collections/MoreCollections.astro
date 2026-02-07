@@ -1,0 +1,38 @@
+---
+import MoreCollectionsCard from "@/components/cards/MoreCollectionsCard.astro"
+---
+
+<section id="more-collections">
+    <div class="mb-20">
+        <h3 class="text-4xl font-bold mb-8">Colecciones Destacada</h3>
+        <div class="flex gap-8 flex-wrap">
+            <div class="our-categories-card w-[calc(50%-16px)]">
+                <MoreCollectionsCard 
+                    name = "Colección Moderna"
+                    description = "Diseños exclusivos para el día más especial de tu vida. Anillos de compromiso y juegos de boda elegantes."
+                    detail = "20 productos"
+                    image_url = "./products/1.jpeg"
+                    url = 'http://lamicenterperu.com/'
+                />
+            </div>
+            <div class="our-categories-card w-[calc(50%-16px)]">
+                <MoreCollectionsCard 
+                    name = "Colección Oro Rosa"
+                    description = "Diseños exclusivos para el día más especial de tu vida. Anillos de compromiso y juegos de boda elegantes."
+                    detail = "24 productos"
+                    image_url = "./products/2.jpeg"
+                    url = 'http://lamicenterperu.com/'
+                />
+            </div>
+            <div class="our-categories-card w-[calc(50%-16px)]">
+                <MoreCollectionsCard 
+                    name = "Colección Esmeralda"
+                    description = "Diseños exclusivos para el día más especial de tu vida. Anillos de compromiso y juegos de boda elegantes."
+                    detail = "24 productos"
+                    image_url = "./products/3.jpeg"
+                    url = 'http://lamicenterperu.com/'
+                />
+            </div>
+        </div>
+    </div>
+</section>

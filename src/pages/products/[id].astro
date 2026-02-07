@@ -1,0 +1,54 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ProductPage from "@/components/pages/ProductPage";
+import  productsList from '../../data/products.json';
+// import { Product as CrystallizeProduct } from "../../components/product";
+// export const prerender = true;
+
+const { id } = Astro.params;
+const productId = Number(id);
+
+const productIds = new Set(productsList.map(product => product.id));
+const isValidProductId = productIds.has(productId);
+
+// export async function getStaticPaths() {
+//   const paths = await fetchAllProducts();
+//   return paths.catalogue.children.map((child: { path: string }) => ({
+//     params: { product: child.path.replace("/shop/", "") },
+//   }));
+// }
+
+export async function getStaticPaths() {
+    return productsList.map((product) => ({
+        params: { id: product.id.toString() },
+    }));
+}
+
+
+// export async function getStaticPaths() {
+//   return productsList.map(product2 => ({
+//     params: {id: product2.id.toString()} ,
+//   }));
+// }
+
+
+
+// const productData = await fetchProduct(`/shop/${productId}`);
+---
+
+<Layout 
+  title={productsList[productId - 1].name} 
+  description={productsList[productId - 1].description}>
+  <div class="lg:container mx-auto w-full lg:px-0 px-5">
+    <ProductPage client:load
+      id={productId}
+    />
+    <!-- {
+      productData ? (
+        <CrystallizeProduct product={productData.product} client:load/>
+      ) : (
+        <p>Product not found</p>
+      )
+    } -->
+  </div>
+</Layout>

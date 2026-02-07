@@ -1,13 +1,13 @@
 ---
-import FeaturedCollectionCard from "../cards/FeaturedCollectionCard.astro"
+import FeaturedCollectionCard from "@/components/cards/FeaturedCollectionCard.astro"
 ---
 
-<section id="our-categories">
-    <div class="our-categories-container p-20">
+<section id="featured-collection">
+    <div class="mb-20">
         <h3 class="text-4xl font-bold mb-4 text-center">Colección Destacada</h3>
         <p class="text-center mb-8 text-light-gray">Nuestras piezas más icónicas y solicitadas</p>
-        <div class="our-categories-card-container flex gap-8">
-            <div class="our-categories-card w-1/3">
+        <div class="flex gap-8">
+            <div class="w-1/3">
                 <FeaturedCollectionCard 
                     category = "Anillos"
                     name = "Anillo de Diamante Clásico"
@@ -16,21 +16,21 @@ import FeaturedCollectionCard from "../cards/FeaturedCollectionCard.astro"
                     url = 'http://lamicenterperu.com/'
                 />
             </div>
-            <div class="our-categories-card w-1/3">
+            <div class="w-1/3">
                 <FeaturedCollectionCard 
                     category = "Anillos"
                     name = "Anillo de Diamante Clásico"
                     price = 15.20
-                    image_url = "./products/1.jpeg"
+                    image_url = "./products/2.jpeg"
                     url = 'http://lamicenterperu.com/'
                 />
             </div>
-            <div class="our-categories-card w-1/3">
+            <div class="w-1/3">
                 <FeaturedCollectionCard 
                     category = "Anillos"
                     name = "Anillo de Diamante Clásico"
                     price = 15.20
-                    image_url = "./products/1.jpeg"
+                    image_url = "./products/3.jpeg"
                     url = 'http://lamicenterperu.com/'
                 />
             </div>

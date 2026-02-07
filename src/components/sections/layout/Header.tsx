@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-import { BasketButton } from "../icons/BasketIcon";
-import Logo from "../../assets/logo-removebg.png";
+import { BasketButton } from "@/components/icons/BasketIcon";
+import Logo from "@/assets/logo-removebg.png";
 // import categories from '../data/categories.json';
 // import '../styles/header-styles.css'
 
@@ -60,8 +60,8 @@ export const Header = () => {
 
                 <div className="links-container flex items-center justify-center gap-12">
                     <a href="/nosotros/encuentranos" className="link-find-us"></a>
-                    <a href="/nosotros/encuentranos" className="link-find-us">Catálogo</a>
-                    <a href="/nosotros/encuentranos" className="link-find-us">Colecciones</a>
+                    <a href="/catalog" className="link-find-us">Catálogo</a>
+                    <a href="/collections" className="link-find-us">Colecciones</a>
                     <a href="/nosotros/encuentranos" className="link-find-us">Contacto</a>
                     <div className="input-container w-2/5 text-[#000000] rounded-full">
                         <input 

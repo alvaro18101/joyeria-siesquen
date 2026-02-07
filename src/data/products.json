@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Anillo de Diamante Rojo",
+    "price": "950.99",
+    "category": "Anillos",
+    "subcategory": "",
+    "image": "/products/1.jpeg",
+    "date": "2025-03-09",
+    "description": "",
+    "offer_price": "900.49",
+    "stock": 5.0
+  },
+  {
+    "id": 2,
+    "name": "Pendientes",
+    "price": "9.00",
+    "category": "Escolar",
+    "subcategory": "",
+    "image": "/products/2.jpeg",
+    "date": "2025-03-08",
+    "description": "",
+    "offer_price": "8.50",
+    "stock": 2.0
+  },
+  {
+    "id": 3,
+    "name": "Anillo de Santa Rosa",
+    "price": "9.00",
+    "category": "Escolar",
+    "subcategory": "",
+    "image": "/products/3.jpeg",
+    "date": "2025-03-08",
+    "description": "",
+    "offer_price": "8.50",
+    "stock": 2.0
+  }
+]

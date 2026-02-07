@@ -1,6 +1,6 @@
 ---
-import {Header} from '../components/sections/Header';
-import Footer from '../components/sections/Footer.astro';
+import {Header} from '@/components/sections/layout/Header';
+import Footer from '@/components/sections/layout/Footer.astro';
 import "../styles/global.css";
 const { title = "Joyería Siesquén" } = Astro.props;
 ---
@@ -18,7 +18,9 @@ const { title = "Joyería Siesquén" } = Astro.props;
 	</head>
 	<body class="bg-pearl-1 font-heading">
 		<Header client:load/>
-		<slot/>
+		<div class="p-20">
+			<slot/>
+		</div>
 		<Footer />
 	</body>
 </html>
