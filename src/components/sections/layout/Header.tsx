@@ -62,8 +62,8 @@ export const Header = () => {
                     <a href="/nosotros/encuentranos" className="link-find-us"></a>
                     <a href="/catalog" className="link-find-us">Catálogo</a>
                     <a href="/collections" className="link-find-us">Colecciones</a>
-                    <a href="/nosotros/encuentranos" className="link-find-us">Contacto</a>
-                    <div className="input-container w-2/5 text-[#000000] rounded-full">
+                    <a href="/contact" className="link-find-us">Contacto</a>
+                    {/* <div className="input-container w-2/5 text-[#000000] rounded-full">
                         <input 
                             type="text" 
                             placeholder="Buscar productos"
@@ -72,13 +72,13 @@ export const Header = () => {
                             onChange={(e) => setSearchTerm(e.target.value)}
                             onKeyDown={(e) => e.key === "Enter" && handleSearch(e)}
                         />
-                    </div>
+                    </div> */}
                 </div>
-                <a href="/cart" title="Your cart">
+                {/* <a href="/cart" title="Your cart">
                     <BasketButton 
                         basketCount={basketCount}
                     />
-                </a>
+                </a> */}
             </div>
         </header>
     );

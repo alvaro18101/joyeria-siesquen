@@ -1,0 +1,22 @@
+---
+const {name, description, info, icon_name} = Astro.props;
+---
+
+<div class="contact-card-container bg-white rounded-lg p-8 w-full border border-white">
+    <div class="flex gap-4 mb-4">
+        <div class="icon-container">
+            {icon_name}
+        </div>
+        <div class="name-container font-semibold">
+            {name}
+        </div>
+    </div>
+    <p class="text-light-gray mb-4">{description}</p>
+    <p class="text-gold-1 font-semibold mb-4">{info}</p>
+</div>
+
+<style scoped>
+.contact-card-container:hover {
+    border: 1px solid var(--color-gold-1);
+}
+</style>

@@ -1,0 +1,47 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ContactCard from "@/components/cards/ContactCard.astro";
+---
+
+<Layout>
+    <h2 class="text-4xl font-bold mb-4 text-center">Ponte en Contacto</h2>
+	<p class="mb-8 w-3/5 text-light-gray m-auto text-center">Estamos aquí para ayudarte. Contáctanos con cualquier pregunta sobre nuestras colecciones o servicios de joyería.</p>
+    <div class="info-container flex gap-8 mb-10">
+        <ContactCard 
+            name = "Email"
+            description = "Responderemos en 24 horas"
+            info = "ha_siesca@hotmail.com"
+            icon_name="email"
+        />
+        <ContactCard 
+            name = "Teléfono"
+            description = "Llamadas de lunes a domingo"
+            info = "+51 980652426"
+            icon_name="phone"
+        />
+        <ContactCard 
+            name = "WhatsApp"
+            description = "Respondemos al instante"
+            info = "+51 980652426"
+            icon_name="whatsapp"
+        />
+    </div>
+    <div class="w-1/2 m-auto flex gap-25 justify-center items-center">
+        <a href="/catalog" class="w-1/2 text-center px-4 py-3 rounded-lg border border-gold-1 bg-gold-1">Explorar catálogo</a>
+        <a 
+            href="https://api.whatsapp.com/send?phone=51980652429&text=Hola%2C%20quiero%20info%20sobre%20las%20joyas!"
+            target="_blank"
+            class="w-1/2 text-center px-4 py-3 rounded-lg border border-gold-1"
+        >
+            Ir al WhatsApp
+        </a>
+    </div>
+</Layout>
+
+<style scoped>
+@media screen and (max-width:900px) {
+	.info-container {
+		flex-direction: column;
+	}
+}
+</style>

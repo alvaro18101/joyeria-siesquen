@@ -18,9 +18,25 @@ const { title = "Joyería Siesquén" } = Astro.props;
 	</head>
 	<body class="bg-pearl-1 font-heading">
 		<Header client:load/>
-		<div class="p-20">
+		<div class="main-container p-20">
 			<slot/>
 		</div>
 		<Footer />
 	</body>
 </html>
+
+<style scoped>
+@media screen and (max-width:1000px) {
+	.main-container {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+
+@media screen and (max-width:800px) {
+	.main-container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+</style>
