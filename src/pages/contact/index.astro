@@ -4,9 +4,9 @@ import ContactCard from "@/components/cards/ContactCard.astro";
 ---
 
 <Layout>
-    <h2 class="text-4xl font-bold mb-4 text-center">Ponte en Contacto</h2>
-	<p class="mb-8 w-3/5 text-light-gray m-auto text-center">Estamos aquí para ayudarte. Contáctanos con cualquier pregunta sobre nuestras colecciones o servicios de joyería.</p>
-    <div class="info-container flex gap-8 mb-10">
+    <h2 class="text-5xl md:text-4xl font-bold mb-6 text-center">Ponte en Contacto</h2>
+	<p class="mb-10 w-full md:w-3/5 text-light-gray m-auto text-center">Estamos aquí para ayudarte. Contáctanos con cualquier pregunta sobre nuestras colecciones o servicios de joyería.</p>
+    <div class="flex flex-col gap-4 lg:flex-row lg:gap-8 mb-10">
         <ContactCard 
             name = "Email"
             description = "Responderemos en 24 horas"
@@ -26,22 +26,24 @@ import ContactCard from "@/components/cards/ContactCard.astro";
             icon_name="whatsapp"
         />
     </div>
-    <div class="w-1/2 m-auto flex gap-25 justify-center items-center">
-        <a href="/catalog" class="w-1/2 text-center px-4 py-3 rounded-lg border border-gold-1 bg-gold-1">Explorar catálogo</a>
+    <div 
+        class="m-auto w-full lg:w-1/2 flex flex-col md:flex-row gap-4 lg:gap-25 justify-center items-center"
+    >
+        <a href="/catalog" class="w-full text-center px-4 py-3 rounded-lg border border-gold-1 bg-gold-1">Explorar catálogo</a>
         <a 
             href="https://api.whatsapp.com/send?phone=51980652429&text=Hola%2C%20quiero%20info%20sobre%20las%20joyas!"
             target="_blank"
-            class="w-1/2 text-center px-4 py-3 rounded-lg border border-gold-1"
+            class="w-full text-center px-4 py-3 rounded-lg border border-gold-1"
         >
             Ir al WhatsApp
         </a>
     </div>
 </Layout>
 
-<style scoped>
+<!-- <style scoped>
 @media screen and (max-width:900px) {
 	.info-container {
 		flex-direction: column;
 	}
 }
-</style>
+</style> -->

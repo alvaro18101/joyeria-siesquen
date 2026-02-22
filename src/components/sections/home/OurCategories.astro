@@ -6,22 +6,22 @@ import OurCategoriesCard from "@/components/cards/OurCategoriesCard.astro"
     <div class="mb-20">
         <h2 class="text-4xl font-bold mb-4 text-center">Nuestras Categorías</h2>
         <p class="text-center mb-8 text-light-gray">Descubre nuestra selección de joyería en diferentes categorías</p>
-        <div class="flex gap-4">
-            <div class="w-1/3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="w-full">
                 <OurCategoriesCard 
                     category = "Anillos"
                     description = "Diseños clásicos y contemporáneos"
                     detail = "24 piezas"
                 />
             </div>
-            <div class="w-1/3">
+            <div class="w-full">
                 <OurCategoriesCard 
                     category = "Collares"
                     description = "Elegancia alrededor de tu cuello"
                     detail = "24 piezas"
                 />
             </div>
-            <div class="w-1/3">
+            <div class="w-full">
                 <OurCategoriesCard 
                     category = "Pendientes"
                     description = "Luminosos y sofisticados"
