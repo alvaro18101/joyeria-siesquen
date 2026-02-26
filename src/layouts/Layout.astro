@@ -1,5 +1,6 @@
 ---
-import {Header} from '@/components/sections/layout/Header';
+// import {Header} from '@/components/sections/layout/Header';
+import Header from '@/components/sections/layout/Header.astro';
 import Footer from '@/components/sections/layout/Footer.astro';
 import "../styles/global.css";
 const { title = "Joyería Siesquén" } = Astro.props;
@@ -17,7 +18,7 @@ const { title = "Joyería Siesquén" } = Astro.props;
 		<meta name="keywords" content="joyeria, oro">
 	</head>
 	<body class="bg-pearl-1 font-heading">
-		<Header client:load/>
+		<Header />
 		<div class="main-container p-20">
 			<slot/>
 		</div>

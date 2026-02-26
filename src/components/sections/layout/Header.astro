@@ -1,0 +1,123 @@
+---
+import Logo from "@/assets/logo-removebg.png";
+---
+
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo">
+        <img 
+            src={Logo.src} 
+            alt="Joyería Siesquén"
+            draggable='false' 
+            class="logo-img w-20" 
+        />
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/catalog">Catálogo</a></li>
+      <li><a href="/collections">Colecciones</a></li>
+      <li><a href="/contact">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    background: transparent;
+    /* color: var(--color-dark-gray); */
+    position: relative;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--color-dark-gray);
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-dark-gray);
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #eeee;
+      flex-direction: column;
+      width: 200px;
+      padding: 1rem;
+      display: none;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+  }
+</style>
+
+<script client:load>
+  const navbar = document.querySelector('.navbar');
+  const toggle = navbar.querySelector('.menu-toggle');
+  const navLinks = navbar.querySelector('.nav-links');
+
+  function openMenu() {
+    navLinks.classList.add('active');
+  }
+
+  function closeMenu() {
+    navLinks.classList.remove('active');
+  }
+
+  function toggleMenu() {
+    navLinks.classList.toggle('active');
+  }
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // evita que el click burbujee
+    toggleMenu();
+  });
+
+  // 🔥 Cerrar si se hace click fuera
+  document.addEventListener('click', (event) => {
+    const isClickInside = navbar.contains(event.target);
+
+    if (!isClickInside) {
+      closeMenu();
+    }
+  });
+
+  // 🔥 Cerrar si se toca un link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
