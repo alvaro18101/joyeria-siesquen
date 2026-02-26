@@ -4,9 +4,9 @@ import MoreCollectionsCard from "@/components/cards/MoreCollectionsCard.astro"
 
 <section id="more-collections">
     <div class="mb-20">
-        <h3 class="text-4xl font-bold mb-8">Colecciones Destacada</h3>
-        <div class="flex gap-8 flex-wrap">
-            <div class="our-categories-card w-[calc(50%-16px)]">
+        <h3 class="text-3xl md:text-4xl font-bold mb-8">Colecciones Destacada</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="our-categories-card w-full">
                 <MoreCollectionsCard 
                     name = "Colección Moderna"
                     description = "Diseños exclusivos para el día más especial de tu vida. Anillos de compromiso y juegos de boda elegantes."
@@ -15,7 +15,7 @@ import MoreCollectionsCard from "@/components/cards/MoreCollectionsCard.astro"
                     url = 'http://lamicenterperu.com/'
                 />
             </div>
-            <div class="our-categories-card w-[calc(50%-16px)]">
+            <div class="our-categories-card w-full">
                 <MoreCollectionsCard 
                     name = "Colección Oro Rosa"
                     description = "Diseños exclusivos para el día más especial de tu vida. Anillos de compromiso y juegos de boda elegantes."
@@ -24,7 +24,7 @@ import MoreCollectionsCard from "@/components/cards/MoreCollectionsCard.astro"
                     url = 'http://lamicenterperu.com/'
                 />
             </div>
-            <div class="our-categories-card w-[calc(50%-16px)]">
+            <div class="our-categories-card w-full">
                 <MoreCollectionsCard 
                     name = "Colección Esmeralda"
                     description = "Diseños exclusivos para el día más especial de tu vida. Anillos de compromiso y juegos de boda elegantes."
