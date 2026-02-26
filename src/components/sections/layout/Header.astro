@@ -29,7 +29,6 @@ import Logo from "@/assets/logo-removebg.png";
 <style>
   .navbar {
     background: transparent;
-    /* color: var(--color-dark-gray); */
     position: relative;
     border-bottom: 1px solid #ddd;
   }
@@ -61,6 +60,7 @@ import Logo from "@/assets/logo-removebg.png";
     font-size: 1.5rem;
     color: var(--color-dark-gray);
     cursor: pointer;
+    user-select: none;
   }
 
   @media (max-width: 768px) {
@@ -85,39 +85,31 @@ import Logo from "@/assets/logo-removebg.png";
   }
 </style>
 
-<script client:load>
-  const navbar = document.querySelector('.navbar');
-  const toggle = navbar.querySelector('.menu-toggle');
-  const navLinks = navbar.querySelector('.nav-links');
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
 
-  function openMenu() {
-    navLinks.classList.add('active');
-  }
+    const toggle = navbar.querySelector<HTMLButtonElement>('.menu-toggle')!;
+    const navLinks = navbar.querySelector<HTMLUListElement>('.nav-links')!;
 
-  function closeMenu() {
-    navLinks.classList.remove('active');
-  }
-
-  function toggleMenu() {
-    navLinks.classList.toggle('active');
-  }
-
-  toggle.addEventListener('click', (e) => {
-    e.stopPropagation(); // evita que el click burbujee
-    toggleMenu();
-  });
-
-  // 🔥 Cerrar si se hace click fuera
-  document.addEventListener('click', (event) => {
-    const isClickInside = navbar.contains(event.target);
-
-    if (!isClickInside) {
-      closeMenu();
+    function closeMenu() {
+      navLinks.classList.remove('active');
     }
-  });
 
-  // 🔥 Cerrar si se toca un link
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!navbar.contains(event.target as Node)) {
+        closeMenu();
+      }
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
   });
 </script>
