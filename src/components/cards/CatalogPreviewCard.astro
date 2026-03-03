@@ -1,0 +1,32 @@
+---
+import rawProducts from '@/data/products.json';
+import FullProductCard from './FullProductCard.astro';
+
+interface Props {
+    category: string;
+    limit?: number;
+}
+
+const {category, limit} = Astro.props;
+
+const products = rawProducts.filter(p => p.category === category).slice(0, limit)
+---
+
+<section>
+    <h2 class="text-3xl font-bold mb-4">{category}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+            products.map(product => (
+                // <FullProductCard product={product} />
+                <div>
+                    <img src={product.image} alt="" class="rounded-lg">
+                    <p class="font-bold">{product.name}</p>
+                    <p>{product.price}</p>
+                </div>
+            ))
+        }
+    </div>
+    <div class="flex justify-end">
+        <a href="/" class="text-gold-1 font-bold">Ver más</a>
+    </div>
+</section>

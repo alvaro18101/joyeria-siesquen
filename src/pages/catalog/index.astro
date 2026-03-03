@@ -1,10 +1,11 @@
 ---
-import FUllProductCard from '@/components/cards/FullProductCard.astro';
 import Layout from '@/layouts/Layout.astro';
+import FullProductCard from '@/components/cards/FullProductCard.astro';
+import CatalogPreviewCard from '@/components/cards/CatalogPreviewCard.astro';
 ---
 
 <Layout>
-	<h2 class="text-4xl md:text-6xl font-bold mb-8">Catálogo Completo</h2>
+	<h1 class="text-4xl md:text-5xl font-bold mb-8">Catálogo Completo</h1>
 	<p class="mb-8 w-3/5 text-light-gray">Explora nuestra colección exclusiva de joyería fina</p>
 	<!-- <input type="text" class="border"> -->
 	<div class="flex gap-8">
@@ -34,9 +35,8 @@ import Layout from '@/layouts/Layout.astro';
 				<p class="text-light-gray">Más de S/500</p>
 			</div>
 		</div> -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-		<div class="w-full">
-			<FUllProductCard 
+		<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<FullProductCard 
 				category="Anillos"
 				name="Anillo de Diamante Clásico"
 				description="Anillo solitario de diamante de 1.5 quilates en oro blanco 18k"
@@ -45,9 +45,7 @@ import Layout from '@/layouts/Layout.astro';
 				image_url="/products/1.jpeg"
 				url="/"
 			/>
-		</div>
-		<div class="w-full">
-			<FUllProductCard 
+			<FullProductCard 
 				category="Anillos"
 				name="Anillo de Diamante Clásico"
 				description="Anillo solitario de diamante de 1.5 quilates en oro blanco 18k"
@@ -56,62 +54,18 @@ import Layout from '@/layouts/Layout.astro';
 				image_url="/products/1.jpeg"
 				url="/"
 			/>
-		</div>
-		<div class="w-full">
-			<FUllProductCard 
-				category="Anillos"
-				name="Anillo de Diamante Clásico"
-				description="Anillo solitario de diamante de 1.5 quilates en oro blanco 18k"
-				material="Oro blanco"
-				price=20.49
-				image_url="/products/1.jpeg"
-				url="/"
-			/>
-		</div>
-		<div class="w-full">
-			<FUllProductCard 
-				category="Anillos"
-				name="Anillo de Diamante Clásico"
-				description="Anillo solitario de diamante de 1.5 quilates en oro blanco 18k"
-				material="Oro blanco"
-				price=20.49
-				image_url="/products/1.jpeg"
-				url="/"
-			/>
-		</div>
-		<div class="w-full">
-			<FUllProductCard 
-				category="Anillos"
-				name="Anillo de Diamante Clásico"
-				description="Anillo solitario de diamante de 1.5 quilates en oro blanco 18k"
-				material="Oro blanco"
-				price=20.49
-				image_url="/products/1.jpeg"
-				url="/"
-			/>
-		</div>
-		<div class="w-full">
-			<FUllProductCard 
-				category="Anillos"
-				name="Anillo de Diamante Clásico"
-				description="Anillo solitario de diamante de 1.5 quilates en oro blanco 18k"
-				material="Oro blanco"
-				price=20.49
-				image_url="/products/1.jpeg"
-				url="/"
-			/>
-		</div>
-		<div class="w-full">
-			<FUllProductCard 
-				category="Anillos"
-				name="Anillo de Diamante Clásico"
-				description="Anillo solitario de diamante de 1.5 quilates en oro blanco 18k"
-				material="Oro blanco"
-				price=20.49
-				image_url="/products/1.jpeg"
-				url="/"
-			/>
-		</div>
+		</div> -->
 	</div>
+	<div class="mb-8">
+		<CatalogPreviewCard
+			category='Anillos'
+			limit={6}
+		/>
+	</div>
+	<div>
+		<CatalogPreviewCard
+			category='Pendientes'
+			limit={6}
+		/>
 	</div>
 </Layout>
