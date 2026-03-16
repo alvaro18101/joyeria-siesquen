@@ -48,7 +48,7 @@ const CartButton = ({ id, quantity }: CartButtonFunctionProps) => {
 
     return(
         <button 
-            className="px-4 py-2 bg-[#C61618DD] mt-2 rounded-sm text-[#FFFFFF] font-[500]"
+            className="px-4 py-2 bg-gold-1 mt-2 rounded-lg text-[#FFFFFF] font-[500]"
             onClick={(event) => {
                 event.preventDefault();
                 event.stopPropagation();

@@ -5,9 +5,10 @@ import FullProductCard from './FullProductCard.astro';
 interface Props {
     category: string;
     limit?: number;
+    link: string;
 }
 
-const {category, limit} = Astro.props;
+const {category, limit, link} = Astro.props;
 
 const products = rawProducts.filter(p => p.category === category).slice(0, limit)
 ---
@@ -27,6 +28,6 @@ const products = rawProducts.filter(p => p.category === category).slice(0, limit
         }
     </div>
     <div class="flex justify-end">
-        <a href="/" class="text-gold-1 font-bold">Ver más</a>
+        <a href={link} class="text-gold-1 font-bold">Ver más</a>
     </div>
 </section>

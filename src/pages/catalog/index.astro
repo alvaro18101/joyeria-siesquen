@@ -2,6 +2,8 @@
 import Layout from '@/layouts/Layout.astro';
 import FullProductCard from '@/components/cards/FullProductCard.astro';
 import CatalogPreviewCard from '@/components/cards/CatalogPreviewCard.astro';
+import productList from '@/data/products.json';
+import categories from '@/data/categories.json';
 ---
 
 <Layout>
@@ -60,12 +62,14 @@ import CatalogPreviewCard from '@/components/cards/CatalogPreviewCard.astro';
 		<CatalogPreviewCard
 			category='Anillos'
 			limit={6}
+			link='catalog/rings'
 		/>
 	</div>
 	<div>
 		<CatalogPreviewCard
 			category='Pendientes'
 			limit={6}
+			link='catalog/earrings'
 		/>
 	</div>
 </Layout>

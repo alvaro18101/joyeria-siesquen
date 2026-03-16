@@ -2,8 +2,8 @@
 const {category, name, description, material, price, image_url, url} = Astro.props;
 ---
 
-<div class="collection-container w-full">
-    <div class="collection-image">
+<div class="collection-container w-full mb-4">
+    <div class="collection-image mb-2">
         <img
             class="rounded-2xl" 
             src={image_url} 
@@ -12,12 +12,12 @@ const {category, name, description, material, price, image_url, url} = Astro.pro
         >
     </div>
     <div class="collection-text ">
-        <p class="text-gold-1 font-bold">{category.toUpperCase()}</p>
-        <h3 class="text-xl font-bold">{name}</h3>
-        <p class="text-light-gray">{description}</p>
+        <!-- <p class="text-gold-1 font-bold">{category.toUpperCase()}</p> -->
+        <h3 class="text-xl font-bold mb-1">{name}</h3>
+        <p class="text-light-gray text-sm">{description}</p>
         <div class="collection-details flex justify-between items-center">
             <p class="price font-bold text-xl">S/ {price}</p>
-            <a href={url} class="bg-gold-1 px-4 py-2 rounded-lg text-[#f8f8f8]">
+            <a href={url} class="bg-gold-1 px-3 py-2 rounded-lg text-[#f8f8f8] text-sm">
                 Ver Detalles
             </a>
         </div>

@@ -27,16 +27,16 @@ const ProductPage: React.FC<ProductPageProps> = ({ id }) => {
     if (!product) return null;
     return (
         <div className="product-container mx-auto px-4 py-8 gap-4">
-            <div className="product-container-1 flex gap-8 items-start mb-8">
-                <div className="product-img w-1/2">
+            <div className="flex flex-col md:flex-row gap-8 items-start mb-8">
+                <div className="product-img w-full">
                     <img 
                         src={product.image} 
                         alt={product.image}
                         draggable="true"
-                        className="w-full"
+                        className="w-full rounded-lg"
                     />
                 </div>
-                <div className="product-details w-1/2">
+                <div className="product-details w-full">
                     <p className="category text-[#333333] leading-tight">
                         {product.category}
                     </p>
@@ -46,7 +46,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ id }) => {
                     <div className="prices-container mb-4">
                         { (product.offer_price != "") ? (
                             <div>
-                                <p className=" text-[#C61618] font-semibold">Precio online: S/ <span className="text-2xl">{product.offer_price}</span></p>
+                                <p className=" text-gold-1 font-semibold">Precio de oferta: S/ <span className="text-2xl">{product.offer_price}</span></p>
                                 <p className="text-[#333] line-through">Precio regular: S/ {product.price}</p>
                                 {/* <p className="wholesale-price">Por la compra de {product.wholesale}, la unidad te sale a S/. {product.wholesale_price}</p> */}
                             </div>
@@ -60,6 +60,9 @@ const ProductPage: React.FC<ProductPageProps> = ({ id }) => {
                     <div className="description-container mb-4">
                         <p className="font-semibold text-lg">Descripción:</p>
                         <p>{product.description}</p>
+                    </div>
+                    <div className="material-container mb-4">
+                        <p className="font-semibold text-lg">Material: <span className="font-normal text-base">{product.material}</span></p>
                     </div>
                     <div className="shop flex flex-col gap-4">
                         <div className="units-container flex flex-col">
