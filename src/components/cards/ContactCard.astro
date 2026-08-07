@@ -1,11 +1,13 @@
 ---
+import { Icon } from "astro-icon/components";
+
 const {name, description, info, icon_name} = Astro.props;
 ---
 
 <div class="contact-card-container bg-white rounded-lg p-8 w-full border border-transparent">
     <div class="flex gap-4 mb-4">
         <div class="icon-container">
-            {icon_name}
+            <Icon name={`lucide:${icon_name}`} class="w-6 h-6" />
         </div>
         <div class="name-container font-semibold">
             {name}

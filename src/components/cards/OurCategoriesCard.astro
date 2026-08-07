@@ -1,15 +1,14 @@
 ---
-const {category, description, image_url, detail} = Astro.props;
+import { Icon } from "astro-icon/components";
+
+const {icon, category, description, image_url, detail} = Astro.props;
 import { RingIcon } from "@/components/icons/RingIcon";
 
 ---
 
 <div class="category-container bg-white rounded-lg p-6">
     <div class="category-image bg-pearl-2 w-fit p-3 rounded-lg mb-4">
-        <RingIcon
-            fillColor={"#111"},
-            size={60}
-        />
+        <Icon name={`lucide:${icon}`} class="w-6 h-6" />
     </div>
     <div class="category-details">
         <p class="text-lg font-bold">{category}</p>
