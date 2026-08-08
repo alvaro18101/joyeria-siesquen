@@ -4,6 +4,10 @@
         "slug": "rings"
     },
     {
+        "name": "Collares",
+        "slug": "necklaces"
+    },
+    {
         "name": "Pendientes",
         "slug": "earrings"
     }

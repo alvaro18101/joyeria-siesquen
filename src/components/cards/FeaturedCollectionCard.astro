@@ -17,7 +17,7 @@ const {category, name, price, image_url, url} = Astro.props;
         <div class="collection-details flex justify-between items-center">
             <p class="price text-lg">S/ {price}</p>
             {url && <div class="view-project">
-            <a href={url} target="_blank" class="bg-gold-1 px-4 py-2 rounded-lg text-[#f8f8f8]">
+            <a href={url} class="bg-gold-1 px-4 py-2 rounded-lg text-[#f8f8f8]">
                 Ver
             </a>
             </div>}
