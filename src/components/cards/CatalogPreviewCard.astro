@@ -1,6 +1,7 @@
 ---
 import rawProducts from '@/data/products.json';
 import FullProductCard from './FullProductCard.astro';
+import ProductCard2 from "@/components/cards/ProductCard2.astro"
 
 interface Props {
     category: string;
@@ -19,11 +20,9 @@ const products = rawProducts.filter(p => p.category === category).slice(0, limit
         {
             products.map(product => (
                 // <FullProductCard product={product} />
-                <div>
-                    <img src={product.image} alt="" class="rounded-lg">
-                    <p class="font-bold">{product.name}</p>
-                    <p>{product.price}</p>
-                </div>
+                <ProductCard2 
+                    id={product.id}
+                />
             ))
         }
     </div>

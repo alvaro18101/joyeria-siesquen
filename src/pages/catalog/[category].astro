@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import FullProductCard from "@/components/cards/FullProductCard.astro";
+import ProductCard2 from "@/components/cards/ProductCard2.astro";
 import categories from "../../data/categories.json";
 import products from "../../data/products.json";
 
@@ -27,14 +28,8 @@ const filteredProducts = products.filter(
 ) : (
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
     {filteredProducts.map((product) => (
-      <FullProductCard 
-      category="Anillos"
-      name={product.name}
-      description="Anillo solitario de diamante de 1.5 quilates en oro blanco 18k"
-      material="Oro blanco"
-      price={20.49}
-      image_url="/products/1.jpeg"
-      url={`/products/${product.id}`}
+      <ProductCard2 
+        id={product.id}
       />
     ))}
   </div>

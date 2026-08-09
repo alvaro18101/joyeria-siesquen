@@ -47,12 +47,12 @@ const ProductPage: React.FC<ProductPageProps> = ({ id }) => {
                         { (product.offer_price != "") ? (
                             <div>
                                 <p className=" text-gold-1 font-semibold">Precio de oferta: S/ <span className="text-2xl">{product.offer_price}</span></p>
-                                <p className="text-[#333] line-through">Precio regular: S/ {product.price}</p>
+                                <p className="text-[#333] line-through">Precio regular: S/ {product.price.toFixed(2)}</p>
                                 {/* <p className="wholesale-price">Por la compra de {product.wholesale}, la unidad te sale a S/. {product.wholesale_price}</p> */}
                             </div>
                         ) : (
                             <div>
-                                <p className="price mb-2">S/ <span className="text-2xl">{product.price}</span></p>
+                                <p className="price mb-2">S/ <span className="text-2xl">{product.price.toFixed(2)}</span></p>
                                 {/* <p className="wholesale-price">Por la compra de {product.wholesale}, la unidad te sale a S/. {product.wholesale_price}</p> */}
                             </div>
                         )}
@@ -67,7 +67,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ id }) => {
                     <div className="shop flex flex-col gap-4">
                         <div className="units-container flex flex-col">
                             <label htmlFor="quantity" className="font-semibold text-lg">
-                                Cantidad
+                                Cantidad:
                             </label>
                             <div className="units">
                                 <input 
