@@ -10,5 +10,9 @@
     {
         "name": "Pendientes",
         "slug": "earrings"
+    },
+    {
+        "name": "Pulseras",
+        "slug": "bracelets"
     }
 ]
