@@ -16,7 +16,8 @@ interface CartProductProps {
 
 
 const CartButton = ({ id, quantity }: CartButtonFunctionProps) => {
-    const [buttonText, setButtonText] = useState("Agregar al carro");
+    const product = productList.find(p => p.id == id) // Esto es para la redirección al WhatsApp, quitar cuando se habilite el carrito
+    const [buttonText, setButtonText] = useState("Ir al WhatsApp");
 
     const AddToCart = () => {
         const productCart = JSON.parse(localStorage.getItem("productCart") || "[]");
@@ -42,21 +43,26 @@ const CartButton = ({ id, quantity }: CartButtonFunctionProps) => {
         localStorage.setItem("productCart", JSON.stringify(productCart));
         window.dispatchEvent(new Event("storage"));
 
-        setButtonText("¡Agregado!");
-        setTimeout(() => setButtonText("Agregar al carrito"), 1000); // Cambia el texto de nuevo después de 2 segundos
+        setButtonText("Redirigiendo");
+        setTimeout(() => setButtonText("Ir al WhatsApp"), 1000); // Cambia el texto de nuevo después de 2 segundos
     };
 
     return(
+        <a
+        href={`https://api.whatsapp.com/send?phone=51980652429&text=Hola%2C%20me%20interesa:%20${product.name}`}
+        target="_blank"
+        >
         <button 
             className="px-4 py-2 bg-gold-1 mt-2 rounded-lg text-[#FFFFFF] font-[500] cursor-pointer"
             onClick={(event) => {
-                event.preventDefault();
-                event.stopPropagation();
+                // event.preventDefault(); // descomentar cuando se habilite el carrito
+                // event.stopPropagation(); // descomentar cuando se habilite el carrito
                 AddToCart();
             }}
         >
             {buttonText}
         </button>
+        </a>
     );
 };
 

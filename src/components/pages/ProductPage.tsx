@@ -44,7 +44,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ id }) => {
                         {product.name}
                     </p>
                     <div className="prices-container mb-4">
-                        { (product.offer_price != "") ? (
+                        { (product.offer_price != null) ? (
                             <div>
                                 <p className=" text-gold-1 font-semibold">Precio de oferta: S/ <span className="text-2xl">{product.offer_price}</span></p>
                                 <p className="text-[#333] line-through">Precio regular: S/ {product.price.toFixed(2)}</p>
@@ -65,7 +65,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ id }) => {
                         <p className="font-semibold text-lg">Material: <span className="font-normal text-base">{product.material}</span></p>
                     </div>
                     <div className="shop flex flex-col gap-4">
-                        <div className="units-container flex flex-col">
+                        {/* <div className="units-container flex flex-col">
                             <label htmlFor="quantity" className="font-semibold text-lg">
                                 Cantidad:
                             </label>
@@ -82,7 +82,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ id }) => {
                                     // onKeyUp={(e) => e.key === "Enter" && CartButtonFunction({ id: product.id, quantity:quantity })}
                                 />
                             </div>
-                        </div>
+                        </div> */}
                         {/* <input 
                             type="submit" 
                             value="Agregar al carrito" 

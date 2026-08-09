@@ -20,9 +20,9 @@ const product = products.find(p => (p.id == id))
             draggable="false"
         >
     </div>
-    <div class="product-text font-bold">
+    <div class="product-text">
         <!-- <p class="text-gold-1 text-sm">{product?.category}</p> -->
-        <h3 class="text-xl">
+        <h3 class="text-xl font-bold">
             <a href={`/products/${product?.id}`}>
                 {product?.name}
             </a>

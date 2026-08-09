@@ -21,12 +21,12 @@ const filteredProducts = products.filter(
 ---
 
 <Layout>
-<h1 class="text-3xl font-bold mb-6">{category.name}</h1>
+<h1 class="text-4xl md:text-5xl font-bold mb-6">{category.name}</h1>
 
 {filteredProducts.length === 0 ? (
   <p>No hay productos en esta categoría.</p>
 ) : (
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
     {filteredProducts.map((product) => (
       <ProductCard2 
         id={product.id}
